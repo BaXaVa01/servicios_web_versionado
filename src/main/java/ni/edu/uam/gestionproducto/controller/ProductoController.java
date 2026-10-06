@@ -45,6 +45,13 @@ public class ProductoController {
         return productoService.guardar(dto);
     }
 
+    @GetMapping("/etiqueta/{etiquetaId}")
+    public List<Producto> listarPorEtiqueta(
+            @PathVariable Integer etiquetaId) {
+
+        return productoService.listarPorEtiqueta(etiquetaId);
+    }
+
     @PutMapping("/{id}")
     public Producto actualizar(
             @PathVariable Integer id,

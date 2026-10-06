@@ -81,4 +81,8 @@ public class ProductoService {
 
         return productoRepository.save(producto);
     }
+
+    public List<Producto> listarPorEtiqueta(Integer etiquetaId) {
+        return productoRepository.findByEtiquetasId(etiquetaId);
+    }
 }
